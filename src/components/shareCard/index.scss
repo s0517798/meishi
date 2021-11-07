@@ -1,0 +1,98 @@
+// *
+// **
+// view all cards
+
+.shareCard {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  background-color: white;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .shareCardScaffold {
+    height: 100vh;
+    background-color: white;
+    border-radius: 30px;
+    margin: auto 0px;
+    position: relative;
+    overflow: scroll;
+    .backbtn {
+      width: 100px;
+      margin-top: 15px;
+      margin-left: 15px;
+      z-index: 1;
+      color: #d12e5e;
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
+      span {
+        font-size: 20px;
+        margin-left: 5px;
+      }
+    }
+    .shareCardHeading {
+      margin: 0px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ion-icon {
+        font-size: 30px;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+          transition: all 0.1s;
+        }
+      }
+    }
+    .forQr {
+      display: block;
+      height: 300px;
+      width: 300px;
+      background-color: black;
+      margin: 20px 20px;
+    }
+    .shareLocation {
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 40px;
+      color: #d12e5e;
+    }
+    .editCard {
+      font-size: 30px;
+      background-color: #d12e5e;
+      margin: 20px 20px;
+      border-radius: 30px;
+      color: white;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 300;
+    }
+    .deleteCard {
+      font-size: 30px;
+      border: 2px solid #d12e5e;
+      color: #d12e5e;
+      margin: 20px 20px;
+      border-radius: 30px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 300;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+.navBar {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 90%;
+  background-color: #d12e5e;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 20px 0px 2.2px rgba(0, 0, 0, 0.02),
+    15px 0px 5.3px rgba(0, 0, 0, 0.028), 10px 0px 10px rgba(0, 0, 0, 0.035),
+    8px 0px 17.9px rgba(0, 0, 0, 0.042), 5px 0px 33.4px rgba(0, 0, 0, 0.05),
+    3px 0px 80px rgba(0, 0, 0, 0.07);
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    ion-icon {
+      font-size: 50px;
+      color: white;
+    }
+
+    h4 {
+      color: white;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}
+
+.clickedIcon {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ion-icon {
+    color: #d12e5e !important;
+  }
+  h4 {
+    color: #d12e5e !important;
+  }
+}
+
+// --------media query
+
+@media (orientation: portrait) {
+  .navBar {
+    left: 0;
+    top: 90%;
+    bottom: 0;
+    right: 0;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 0;
+    flex-direction: row;
+    box-shadow: 0px -20px 2.2px rgba(0, 0, 0, 0.02),
+      00px -15px 5.3px rgba(0, 0, 0, 0.028),
+      00px -10px 10px rgba(0, 0, 0, 0.035), 0px -8px 17.9px rgba(0, 0, 0, 0.042),
+      0px -5px 33.4px rgba(0, 0, 0, 0.05), 0px -3px 80px rgba(0, 0, 0, 0.07);
+    h4 {
+      display: none;
+    }
+  }
+  .clickedIcon {
+    width: 70px;
+    height: 70px;
+    ion-icon {
+      color: #d12e5e !important;
+    }
+    h4 {
+      color: #d12e5e !important;
+    }
+  }
+}

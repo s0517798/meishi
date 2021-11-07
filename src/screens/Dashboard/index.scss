@@ -1,0 +1,139 @@
+.header {
+  margin: 15px 0 0 12%;
+  .userInfo {
+    display: inline-block;
+    .profilePicture {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      background-size: cover;
+      background-color: royalblue;
+      float: left;
+      margin: 3px 15px 0 0;
+    }
+    h2 {
+      font-size: 40px;
+      display: inline;
+    }
+    h3 {
+      display: none;
+    }
+  }
+  .meishiLogo {
+    width: 98px;
+    height: 60px;
+    background-color: #d12e5e;
+    float: right;
+    margin-right: 20px;
+    background-image: url("../../assest/meishiLogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    &:hover > .logOutBtn {
+      left: -155px;
+      opacity: 1;
+      transition: all 0.5s;
+    }
+    .logOutBtn {
+      opacity: 0;
+      position: absolute;
+      left: 0px;
+      height: 60px;
+      padding: 0px 20px;
+      background-color: #d12e5e;
+      color: white;
+      font-size: 25px;
+      display: flex;
+      border-radius: 20px 0 0 20px;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      transition: all 0.5s;
+      ion-icon {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+.heading {
+  font-size: 30px;
+  margin-top: 15px;
+  font-weight: 300;
+  margin-left: 12%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.sliderHolder {
+  width: 100%;
+  padding-left: 11%;
+  overflow: scroll;
+  padding-bottom: 30px;
+}
+
+.myCardSlider {
+  margin-top: 15px;
+  display: flex;
+}
+
+.cardBtn {
+  margin: 0 0 20px 12%;
+  background-color: #d12e5e;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  font-size: 20px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  ion-icon {
+    margin-right: 10px;
+    font-size: 25px;
+  }
+}
+
+// *
+// **
+// -------responsive code
+
+@media (orientation: portrait) {
+  .header {
+    margin-left: 20px;
+    .userInfo {
+      h2 {
+        display: none;
+      }
+      h3 {
+        margin-top: 3px;
+        color: #d12e5e;
+        font-weight: 400;
+        display: inline-block;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .heading {
+    margin-left: 20px;
+    font-weight: 600;
+  }
+
+  .sliderHolder {
+    padding-left: 0px;
+  }
+
+  .cardBtn {
+    margin-left: 20px;
+  }
+  .scaffold {
+    padding-bottom: 20%;
+  }
+}

@@ -1,0 +1,80 @@
+.backgroundImage {
+  height: 100vh;
+  width: 70%;
+  background-color: #d12e5e;
+  background-image: url("../../assest/background1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.loginPanel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 32%;
+  background-color: white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: -20px 0px 2.2px rgba(0, 0, 0, 0.02),
+    -15px 0px 5.3px rgba(0, 0, 0, 0.028), -10px 0px 10px rgba(0, 0, 0, 0.035),
+    -8px 0px 17.9px rgba(0, 0, 0, 0.042), -5px 0px 33.4px rgba(0, 0, 0, 0.05),
+    -3px 0px 80px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #d12e5e;
+  width: 80%;
+  border-radius: 30px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  cursor: pointer;
+  ion-icon {
+    color: white;
+    font-size: 30px;
+  }
+  &:hover {
+    transform: scale(1.03);
+    transition: all 0.4s;
+  }
+}
+
+.glogo {
+  color: white;
+  font-size: 30px;
+}
+.logotxt {
+  display: inline;
+  font-size: 30px;
+  color: white;
+  margin-left: 10px;
+}
+
+// --------media query
+
+@media (orientation: portrait) {
+  .backgroundImage {
+    width: 100%;
+    background-image: url("../../assest/background2.jpg");
+    height: 70vh;
+  }
+  .loginPanel {
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 67vh;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px -20px 2.2px rgba(0, 0, 0, 0.02),
+      0px -15px 5.3px rgba(0, 0, 0, 0.028), 0px -10px 10px rgba(0, 0, 0, 0.035),
+      0px -8px 17.9px rgba(0, 0, 0, 0.042), 0px -5px 33.4px rgba(0, 0, 0, 0.05),
+      0px -3px 80px rgba(0, 0, 0, 0.07);
+  }
+}

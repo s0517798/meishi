@@ -1,0 +1,97 @@
+.cardMargin {
+  width: 380px;
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 0 15px;
+}
+.cardDB {
+  cursor: pointer;
+  width: 380px;
+  height: 200px;
+  border-radius: 30px;
+  position: relative;
+
+  .cardImage {
+    width: 45%;
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .cardOverlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 39%;
+    bottom: 0;
+    border-radius: 30px;
+    color: white;
+    padding: 15px 15px 0 15px;
+    h4 {
+      font-size: 20px;
+    }
+    .position {
+      font-size: 18;
+      font-weight: 300;
+    }
+    .company {
+      font-size: 18;
+      font-weight: 300;
+      font-style: italic;
+    }
+    .logo {
+      height: 40px;
+      width: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 7px 0;
+    }
+    .headline {
+      font-size: 12px;
+      font-weight: 400;
+    }
+    ion-icon {
+      position: absolute;
+      font-size: 30px;
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+}
+
+// responsivecode
+// **
+// *
+
+@media (max-width: 400px) {
+  .cardMargin {
+    margin: 0 0;
+    width: 100vw;
+    margin-left: 20px;
+  }
+  .cardDB {
+    width: 100vw;
+    height: 9/16 * 100vw;
+  }
+}
+@media (max-width: 350px) {
+  .logo {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+  }
+}
+
+.parentRelative {
+  position: relative;
+}
+.forClick {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+}

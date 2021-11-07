@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./screens/Login";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Dashboard from "./screens/Dashboard";
+import { useContext } from "react";
+import { AuthContext } from "./context/authContext";
+import NotificationBar from "./context/notificationContext";
+import Spinner from "./context/spinner";
+import Scan from "./screens/Scan";
 
 function App() {
+  const user = useContext(AuthContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Spinner>
+      <NotificationBar>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              {user ? <Dashboard /> : <Login />}
+            </Route>
+            <Route exact path="/dashboard">
+              {user ? <Dashboard /> : <Login />}
+            </Route>
+            <Route exact path="/scan">
+              {user ? <Scan /> : <Login />}
+            </Route>
+          </Switch>
+        </Router>
+      </NotificationBar>
+    </Spinner>
   );
 }
 
