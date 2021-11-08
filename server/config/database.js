@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-console.log(process.env.CLOUD_NAME);
 const connection = mongoose.createConnection(process.env.MONGODB_URL);
 
 const cardSchema = new mongoose.Schema({
