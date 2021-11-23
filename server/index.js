@@ -1,11 +1,15 @@
 require("dotenv").config();
 const express = require("express");
+
 const cors = require("cors");
 const formidable = require("express-formidable");
 const database = require("./config/database");
 const routes = require("./routes/routes");
 
 const app = express();
+
+//view engine
+app.set("view engine", "ejs");
 
 //*
 //***
