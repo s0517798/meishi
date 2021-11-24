@@ -60,7 +60,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
+      padding: 1px 30px;
       h1 {
         font-size: 20px;
       }
@@ -76,6 +76,8 @@
       .logoImage {
         height: 60px;
         background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
         width: 60px;
       }
     }

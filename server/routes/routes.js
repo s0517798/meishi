@@ -118,7 +118,6 @@ router.get("/card/:cardNo", (req, res) => {
 
 router.get("/viewcard/:cardNo", (req, res) => {
   NewCard.findOne({ cardno: req.params.cardNo }, (err, doc) => {
-    console.log(doc);
     if (!err) res.render("card", { profile: doc });
     else res.send({ error: err });
   });

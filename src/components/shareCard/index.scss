@@ -69,6 +69,12 @@
       align-items: center;
       font-size: 40px;
       color: #d12e5e;
+      a,
+      a:visited,
+      a:hover,
+      a:active {
+        color: inherit;
+      }
     }
     .editCard {
       font-size: 30px;

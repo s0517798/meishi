@@ -3,6 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Primary Meta Tags -->
+    <meta
+      name="title"
+      content="<%= profile.name %> <%= profile.title %> <%= profile.company %>"
+    />
+    <meta name="description" content="View digital meishi card." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="<%= profile.name %> <%= profile.title %> <%= profile.company %>"
+    />
+    <meta property="og:description" content="View digital meishi card." />
+    <meta property="og:image" content="<%= profile.profile %>" />
+
     <title>
       <%= profile.name %> <%= profile.title %> <%= profile.company %>
     </title>
@@ -81,6 +97,8 @@
       }
       .identification .logoImage {
         height: 60px;
+        background-position: center;
+        background-repeat: no-repeat;
         background-size: contain;
         width: 60px;
       }
@@ -114,6 +132,7 @@
         height: 30px;
         width: 100%;
         position: absolute;
+        transform: translateY(-1px);
       }
     </style>
     <div class="fullCard">
@@ -122,11 +141,9 @@
           class="profileImage"
           style="background-image: url(<%= profile.profile %>)"
         ></div>
-        <div class="cardMatter" style="background-color: <%" ="profile.theme" %>
-          >
+        <div class="cardMatter" style="background-color: <%= profile.theme %>">
           <div class="identification">
-            <div style="color: <%" ="profile.theme" %>
-              >
+            <div style="color: <%= profile.theme %>">
               <h1><%= profile.name %></h1>
               <h2><%= profile.title %></h2>
               <h3><%= profile.company %></h3>
@@ -142,6 +159,10 @@
               <%= profile.details %>
             </div>
           </div>
+          <div
+            class="bottomSticker"
+            style="background-color: <%= profile.theme %>"
+          ></div>
         </div>
       </div>
     </div>
@@ -224,16 +245,14 @@
         .map(
           (ele) => `<a
                     target="_blank"
-                    href={
+                    href=
                       ${
                         mappedData.find(
                           (element) => element.name === Object.keys(ele)[0]
                         ).href + Object.values(ele)[0]
                       }
-                    }
                     style="color:<%= profile.theme %>"
                   >
-                    click here
                     <ion-icon name=${
                       mappedData.find(
                         (element) => element.name === Object.keys(ele)[0]
@@ -242,9 +261,8 @@
                       <h1>${Object.values(ele)[0]}</h1>
                   </a>`
         )
-        .join();
+        .join(" ");
       document.querySelector(".links").innerHTML = a;
-      console.log(a);
     </script>
   </body>
 </html>
