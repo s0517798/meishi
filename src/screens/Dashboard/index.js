@@ -41,7 +41,9 @@ const Dashboard = () => {
   const fillCreated = () => {
     setCreatedCardData([]);
     createdCards.forEach(async (element) => {
-      let response = await http.get(`http://localhost:9000/card/${element}`);
+      let response = await http.get(
+        `https://meishi-card.herokuapp.com/card/${element}`
+      );
       if (!response.data.error) {
         setCreatedCardData((prev) => [...prev, response.data.cardDetail]);
       }
@@ -52,7 +54,9 @@ const Dashboard = () => {
   const fillShared = () => {
     setSharedCardData([]);
     sharedCards.forEach(async (element) => {
-      let response = await http.get(`http://localhost:9000/card/${element}`);
+      let response = await http.get(
+        `https://meishi-card.herokuapp.com/card/${element}`
+      );
       if (!response.data.error) {
         setSharedCardData((prev) => [...prev, response.data.cardDetail]);
       }
@@ -65,7 +69,10 @@ const Dashboard = () => {
       const form = new FormData();
       console.log(user.email);
       form.set("email", user.email);
-      const response = await http.post("http://localhost:9000/newuser", form);
+      const response = await http.post(
+        "https://meishi-card.herokuapp.com/newuser",
+        form
+      );
 
       if (!response.data.error) {
         setCreatedCards(response.data.created);

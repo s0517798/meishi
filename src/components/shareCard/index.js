@@ -30,7 +30,9 @@ const ShareCard = (props) => {
           <h1>Share Card</h1>
           <a
             target="_blank"
-            href={"http://localhost:9000/viewcard/" + props.cardNumber}
+            href={
+              "https://meishi-card.herokuapp.com/viewcard/" + props.cardNumber
+            }
             style={{ color: "black" }}
           >
             <ion-icon name="open-outline"></ion-icon>
@@ -43,7 +45,7 @@ const ShareCard = (props) => {
           <a
             href={
               `whatsapp://send?text=` +
-              "http://localhost:9000/viewcard/" +
+              "https://meishi-card.herokuapp.com/viewcard/" +
               props.cardNumber
             }
             data-action="share/whatsapp/share"
@@ -56,14 +58,14 @@ const ShareCard = (props) => {
             name="link-outline"
             onClick={() => {
               navigator.clipboard.writeText(
-                `http://localhost:9000/viewcard/${props.cardNumber}`
+                `https://meishi-card.herokuapp.com/viewcard/${props.cardNumber}`
               );
               fun("Link Copied.");
             }}
           ></ion-icon>
           <a
             href={
-              "https://www.facebook.com/sharer/sharer.php?u=http://localhost:9000/viewcard/" +
+              "https://www.facebook.com/sharer/sharer.php?u=https://meishi-card.herokuapp.com/" +
               props.cardNumber
             }
             target="_blank"

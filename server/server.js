@@ -17,7 +17,7 @@ app.set("view engine", "ejs");
 app.use(express.json()); //read requests' body, which are json.
 app.use(express.urlencoded({ extended: true })); //read requests' body which are as string.
 app.use(formidable()); //read requst body if it is the type of form.
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "https://meishi-web.web.app/" }));
 
 // *
 // * *
@@ -25,7 +25,10 @@ app.use(cors({ origin: "http://localhost:3000" }));
 
 app.use(routes);
 
-const port = 9000;
+const port = process.env.PORT;
+if (port == null || port == "") {
+  port = 9000;
+}
 app.listen(port, () => {
   console.log(`sever running on port ${port}`);
 });

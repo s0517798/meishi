@@ -54,11 +54,15 @@ const Create = (props) => {
       form.set("headline", headline.current.value);
       form.set("details", JSON.stringify(details));
 
-      const response = await axios.post("http://localhost:9000/create", form, {
-        headers: {
-          "content-type": "multipart/form-data",
-        },
-      });
+      const response = await axios.post(
+        "https://meishi-card.herokuapp.com/create",
+        form,
+        {
+          headers: {
+            "content-type": "multipart/form-data",
+          },
+        }
+      );
       visibility("none");
       if (response.data.status === "OK") {
         notification.fun("New card added successfully.");
