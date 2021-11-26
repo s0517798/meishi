@@ -67,7 +67,6 @@ const Dashboard = () => {
     const postData = async () => {
       visibility("flex");
       const form = new FormData();
-      console.log(user.email);
       form.set("email", user.email);
       const response = await http.post(
         "https://meishi-card.herokuapp.com/newuser",

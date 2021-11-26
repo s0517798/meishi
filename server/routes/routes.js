@@ -31,6 +31,12 @@ router.post("/newuser", (req, res) => {
       });
       try {
         newUser.save();
+        res.send({
+          email: req.fields.email,
+          created: [],
+          shared: [],
+          saved: [],
+        });
       } catch (err) {
         error = err;
       }

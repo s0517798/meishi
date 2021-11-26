@@ -15,14 +15,19 @@ const Scan = () => {
   const [cardValueScan, setCardValueScan] = useState();
 
   const getCardDetail = async (cardNo) => {
-    let response = await http.get(`http://localhost:9000/card/${cardNo}`);
+    let response = await http.get(
+      `https://meishi-card.herokuapp.com/card/${cardNo}`
+    );
     setCardValueScan(response.data.cardDetail);
     setOverlayScanFullCard("flex");
 
     const form = new FormData();
     form.set("email", user.email);
     form.set("card", cardNo);
-    let response2 = await http.post(`http://localhost:9000/savecard`, form);
+    let response2 = await http.post(
+      `https://meishi-card.herokuapp.com/savecard`,
+      form
+    );
     console.log(response2);
     if (response2.data.status !== "OK") {
       fun(response2.data.error);
