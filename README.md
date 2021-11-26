@@ -48,7 +48,7 @@ npm start
 
 
 #### View card,
-![View Card](https://i.ibb.co/gDqDW1p/Screenshot-51.png)
+![View Card](https://i.ibb.co/vYjzbm3/Screenshot-51-new.png)
 
 #### Scan and share,
 ![Share](https://i.ibb.co/hBw6KRt/Screenshot-53.png)
